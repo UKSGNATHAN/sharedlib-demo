@@ -3,6 +3,7 @@ def call(config){
   def ip = config['ip']
   def userName = config['userName']
   def tomcatHome = config['tomcatHome']
+  def warName = config['warName']
   
   sshagent([credId]) {
                     // Stop the tomcat //
