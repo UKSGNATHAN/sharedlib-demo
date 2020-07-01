@@ -3,5 +3,5 @@ def add(x,y){
 }
 
 def sub(x,y){
-  println("Sub of ${x} and {y} is ${x-y}")
+  println("Sub of ${x} and ${y} is ${x-y}")
 }
