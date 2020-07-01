@@ -8,11 +8,11 @@ def call(config){
                     // Stop the tomcat //
                     sh "ssh -o StrictHostKeyChecking=no ${userName}@${ip} ${tomcatHome}/bin/shutdown.sh"
                     // Delete old warfile //
-                    sh "ssh ${username}@${ip} rm -rf ${tomcatHome}/webapps/${warName}*"
+                    sh "ssh ${userName}@${ip} rm -rf ${tomcatHome}/webapps/${warName}*"
                     // Copy latest war file to tomcat-dev server //
                     sh "scp target/springvmvc.war ${userName}@${ip}:${tomcatHome}/webapps/"
                     // start the server //
-                    sh "ssh ${username}@${ip} ${tomcatHome}/bin/startup.sh"
+                    sh "ssh ${userName}@${ip} ${tomcatHome}/bin/startup.sh"
    }
  }
               
