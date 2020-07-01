@@ -11,7 +11,7 @@ def call(config){
                     // Delete old warfile //
                     sh "ssh ${userName}@${ip} rm -rf ${tomcatHome}/webapps/${warName}*"
                     // Copy latest war file to tomcat-dev server //
-                    sh "scp target/springvmvc.war ${userName}@${ip}:${tomcatHome}/webapps/"
+                    sh "scp target/springmvc.war ${userName}@${ip}:${tomcatHome}/webapps/"
                     // start the server //
                     sh "ssh ${userName}@${ip} ${tomcatHome}/bin/startup.sh"
    }
